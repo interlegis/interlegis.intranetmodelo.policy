@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="interlegis.intranetmodelo.policy">
+<body>
+<metal:main fill-slot="main">
+  <tal:main metal:define-macro="main">
+
+    <h1 class="documentFirstHeading" i18n:translate="">
+      Contacts and extensions
+    </h1>
+
+    <div class="documentDescription" i18n:translate="">
+      Contact information and telephone numbers for users of this site.
+    </div>
+
+    <table class="listing">
+        <thead>
+          <tr>
+            <th class="column" i18n:translate="">Picture</th>
+            <th class="column" i18n:translate="">Name</th>
+            <th class="column" i18n:translate="">Extension</th>
+            <th class="column" i18n:translate="">Mobile</th>
+            <th class="column" i18n:translate="">Location</th>
+            <th class="column" i18n:translate="">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="member view/members">
+            <td class="">
+              <img alt="" src="" height="auto" width="64"
+                  tal:attributes="src member/portrait_url;
+                                  alt member/fullname" />
+            </td>
+            <td class="">
+              <a class="" href="" title=""
+                  tal:content="member/fullname"
+                  tal:attributes="href member/url;
+                                  title member/description" />
+            </td>
+            <td class="" tal:content="member/extension" />
+            <td class="" tal:content="member/mobile" />
+            <td class="" tal:content="member/location" />
+            <td class="">
+              <a class="" href="" title="Send email"
+                  tal:content="member/email"
+                  tal:attributes="href string:mailto:${member/email}"
+                  i18n:attributes="title" />
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+  </tal:main>
+</metal:main>
+</body>
+</html>

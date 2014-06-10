@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<import-step id="setup" version="1"
+    handler="interlegis.intranetmodelo.policy.setuphandlers.setup_various"
+    title="interlegis.intranetmodelo.policy setup handlers">
+</import-step>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<portlets>
+  <assignment name="navigation" category="context" key="/intranet"
+      manager="plone.leftcolumn" type="portlets.Navigation"
+      visible="True">
+    <property name="topLevel">1</property>
+    <property name="currentFolderOnly">False</property>
+    <property name="name" />
+    <property name="includeTop">False</property>
+    <property name="bottomLevel">0</property>
+    <property name="root"/>
+  </assignment>
+  <assignment name="user-profile" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.leftcolumn" type="s17.portlets.personprofile.PersonProfile"
+      visible="True">
+    <property name="show_edit_profile_link">True</property>
+    <property name="show_recent_content">False</property>
+    <property name="show_title">False</property>
+    <property name="show_logout_link">True</property>
+  </assignment>
+  <assignment name="atalhos" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.leftcolumn" type="plone.portlet.static.Static"
+      visible="True">
+    <property name="text">
+      &lt;ul&gt;
+      &lt;li&gt;&lt;a href="intranet/ponto-de-encontro/mural/createObject?type_name=News+Item"&gt;Notícia no mural&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="intranet/ponto-de-encontro/galeria-de-fotos"&gt;Fotos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="intranet/ponto-de-encontro/classificados"&gt;Classificados&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    </property>
+    <property name="more_url"/>
+    <property name="omit_border">False</property>
+    <property name="header">Adicionar conteúdo</property>
+    <property name="footer"/>
+  </assignment>
+  <assignment name="microblog" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.leftcolumn" type="plonesocial.microblog.portlet"
+      visible="True">
+    <property name="compact">True</property>
+    <property name="title">Microblog</property>
+  </assignment>
+  <assignment name="fluxo-de-atividades" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.leftcolumn" type="plonesocial.activitystream.portlet"
+      visible="True">
+    <property name="count">5</property>
+    <property name="compact">True</property>
+    <property name="show_microblog">True</property>
+    <property name="show_content">True</property>
+    <property name="show_discussion">False</property>
+    <property name="title">Fluxo de atividades</property>
+  </assignment>
+  <assignment name="birthdays" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.rightcolumn" type="s17.portlets.birthday.BirthdayPortlet"
+      visible="True">
+    <property name="days_number">30</property>
+  </assignment>
+  <assignment name="voting-portlet" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.rightcolumn" type="collective.polls.VotePortlet"
+      visible="True">
+    <property name="show_closed">False</property>
+    <property name="poll">latest</property>
+    <property name="header"/>
+    <property name="show_total">True</property>
+    <property name="link_poll">True</property>
+  </assignment>
+  <assignment name="previsao-do-tempo" category="context" key="/intranet/pagina-inicial-da-intranet"
+      manager="plone.rightcolumn" type="collective.weather.portlets.weather"
+      visible="True">
+    <property name="header">Previsão do tempo</property>
+    <property name="location">455819</property>
+  </assignment>
+  <blacklist category="context" location="/intranet" manager="plone.leftcolumn"
+      status="block" />
+  <blacklist category="context" location="/intranet" manager="plone.rightcolumn"
+      status="block" />
+  <blacklist category="context" location="/intranet/pagina-inicial-da-intranet" manager="plone.leftcolumn"
+      status="block" />
+  <blacklist category="context" location="/intranet/pagina-inicial-da-intranet" manager="plone.rightcolumn"
+      status="block" />
+</portlets>

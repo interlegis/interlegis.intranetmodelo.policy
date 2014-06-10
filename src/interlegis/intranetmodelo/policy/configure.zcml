@@ -1,0 +1,43 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="interlegis.intranetmodelo.policy">
+
+  <five:registerPackage package="." />
+  <i18n:registerTranslations directory="locales" />
+
+  <include package="Products.CMFPlacefulWorkflow" />
+  <include package="plone.app.event" />
+  <include package="plone.app.ldap" />
+  <include package="plone.app.openid" />
+  <include package="cioppino.twothumbs" />
+  <include package="collective.classifieds" />
+  <include package="collective.cover" />
+  <include package="collective.polls" />
+  <include package="collective.weather" />
+  <include package="collective.xmpp.core" file="reactor.zcml" />
+  <include package="collective.xmpp.chat" />
+  <include package="ftw.globalstatusmessage" />
+  <include package="interlegis.intranetmodelo.departments" />
+  <include package="plonesocial.activitystream" />
+  <include package="plonesocial.microblog" />
+  <include package="plonesocial.network" />
+  <include package="s17.portlets" />
+  <include package="s17.taskmanager" />
+  <include package="Solgema.fullcalendar" />
+  <include package="webcouturier.dropdownmenu" />
+
+  <grok:grok package="." />
+
+  <browser:resourceDirectory
+      name="interlegis.intranetmodelo.policy"
+      directory="static"
+      />
+
+  <include file="overrides.zcml" />
+  <include file="profiles.zcml" />
+
+</configure>

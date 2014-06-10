@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<registry>
+
+  <!-- plone.app.event configuration -->
+  <record name="plone.app.event.available_timezones" interface="plone.app.event.interfaces.IEventSettings" field="available_timezones">
+    <field type="plone.registry.field.List">
+      <default/>
+      <description>help_available_timezones</description>
+      <required>False</required>
+      <title>Available timezones</title>
+      <value_type type="plone.registry.field.Choice">
+        <vocabulary>plone.app.event.Timezones</vocabulary>
+      </value_type>
+    </field>
+    <value>
+      <element>Brazil/Acre</element>
+      <element>Brazil/DeNoronha</element>
+      <element>Brazil/East</element>
+      <element>Brazil/West</element>
+    </value>
+  </record>
+  <record name="plone.app.event.first_weekday" interface="plone.app.event.interfaces.IEventSettings" field="first_weekday">
+    <field type="plone.registry.field.Choice">
+      <description>help_first_weekday</description>
+      <title>label_first_weekday</title>
+      <vocabulary>plone.app.event.Weekdays</vocabulary>
+    </field>
+    <value>6</value>
+  </record>
+  <record name="plone.app.event.portal_timezone" interface="plone.app.event.interfaces.IEventSettings" field="portal_timezone">
+    <field type="plone.registry.field.Choice">
+      <description>help_portal_timezone</description>
+      <title>Portal default timezone</title>
+      <vocabulary>plone.app.event.Timezones</vocabulary>
+    </field>
+    <value>Brazil/East</value>
+  </record>
+
+  <!-- collective.cover configuration -->
+  <record name="collective.cover.controlpanel.ICoverSettings.layouts">
+    <value purge="False">
+      <element key="Intranet Modelo">[{"type": "row", "children": [{"data": {"layout-type": "column", "column-size": 16}, "type": "group", "children": [{"tile-type": "collective.cover.basic", "type": "tile", "id": "f5510c46bf654fac913ac4fa49f65bb0"}], "roles": ["Manager"]}]}, {"type": "row", "children": [{"data": {"layout-type": "column", "column-size": 8}, "type": "group", "children": [{"tile-type": "collective.cover.collection", "type": "tile", "id": "cdba8ece288b4161974ec3313f0d97c1"}], "roles": ["Manager"]}, {"data": {"layout-type": "column", "column-size": 8}, "type": "group", "children": [{"tile-type": "collective.cover.collection", "type": "tile", "id": "f020abc517f14248882784a601bcd1b6"}], "roles": ["Manager"]}]}, {"type": "row", "children": [{"data": {"layout-type": "column", "column-size": 5}, "type": "group", "children": [{"tile-type": "collective.cover.banner", "type": "tile", "id": "f470e44955744015bf950aa624ad7d9c"}], "roles": ["Manager"]}, {"data": {"layout-type": "column", "column-size": 5}, "type": "group", "children": [{"tile-type": "collective.cover.banner", "type": "tile", "id": "bb51756b91d74b918391670ffe1e201e"}], "roles": ["Manager"]}, {"data": {"layout-type": "column", "column-size": 5}, "type": "group", "children": [{"tile-type": "collective.cover.banner", "type": "tile", "id": "f66550a735804fe2b6b1b01bcad119b5"}], "roles": ["Manager"]}]}]</element>
+    </value>
+  </record>
+
+  <!-- collective.weather configuration -->
+  <record name="collective.weather.interfaces.IWeatherSettings.location_ids">
+    <value>
+      <element>455819|Brasília, DF</element>
+    </value>
+  </record>
+
+  <!-- plone.app.discussion configuration -->
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.anonymous_comments" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="anonymous_comments">
+    <value>True</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.anonymous_email_enabled" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="anonymous_email_enabled">
+    <value>True</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.captcha" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="captcha">
+    <value>captcha</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.globally_enabled" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="globally_enabled">
+    <value>True</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.moderation_enabled" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="moderation_enabled">
+    <value>False</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.show_commenter_image" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="show_commenter_image">
+    <value>True</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.text_transform" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="text_transform">
+    <value>text/plain</value>
+  </record>
+
+</registry>

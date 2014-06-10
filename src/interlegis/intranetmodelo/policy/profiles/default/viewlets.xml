@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object>
+  <hidden manager="plone.portalheader" skinname="plonesocial">
+    <viewlet name="plonesocial.suite.navigation"/>
+  </hidden>
+</object>

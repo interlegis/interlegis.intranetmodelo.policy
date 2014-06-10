@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1</version>
+  <dependencies>
+    <dependency>profile-plone.app.event.at:default</dependency>
+    <dependency>profile-cioppino.twothumbs:default</dependency>
+    <dependency>profile-collective.classifieds:default</dependency>
+    <dependency>profile-collective.cover:default</dependency>
+    <dependency>profile-collective.polls:default</dependency>
+    <dependency>profile-collective.weather:default</dependency>
+    <dependency>profile-ftw.globalstatusmessage:default</dependency>
+    <dependency>profile-plone.formwidget.captcha:default</dependency>
+    <dependency>profile-plonesocial.microblog:default</dependency>
+    <dependency>profile-plonesocial.activitystream:default</dependency>
+    <dependency>profile-plonesocial.network:default</dependency>
+    <dependency>profile-s17.portlets:default</dependency>
+    <dependency>profile-Solgema.fullcalendar:default</dependency>
+    <!--dependency>profile-webcouturier.dropdownmenu:default</dependency-->
+    <dependency>profile-interlegis.intranetmodelo.departments:default</dependency>
+  </dependencies>
+</metadata>
