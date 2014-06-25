@@ -4,7 +4,8 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Habilita servidor XMPP padrão (https://colab.interlegis.leg.br/ticket/2944).
+  [hvelarde]
 
 
 1.0b1 (2014-06-05)

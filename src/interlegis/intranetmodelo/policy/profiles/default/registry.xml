@@ -50,6 +50,12 @@
     </value>
   </record>
 
+  <!-- collective.xmpp.core configuration -->
+  <record name="collective.xmpp.core.interfaces.IXMPPSettings.hostname">
+    <field type="plone.registry.field.TextLine" />
+    <value>mensageiro.interlegis.gov.br</value>
+  </record>
+
   <!-- plone.app.discussion configuration -->
   <record name="plone.app.discussion.interfaces.IDiscussionSettings.anonymous_comments" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="anonymous_comments">
     <value>True</value>

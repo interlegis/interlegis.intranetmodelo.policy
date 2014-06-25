@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from datetime import datetime
 from interlegis.intranetmodelo.policy.utils import _add_id
 
 import os
@@ -12,6 +13,10 @@ DEPENDENCIES = [
 IMAGE = open(
     os.path.join(
         os.path.dirname(__file__), 'tests', 'bandeira-brasil.jpg')).read()
+
+startDate = datetime.now()
+endDate = datetime.now()
+timezone = 'Brazil/East',
 
 # new intranet structure; this dictionary defines the objects that are going
 # to be created on the root of the intranet; it also includes information
@@ -91,6 +96,67 @@ INTRANET_STRUCTURE = [
                     ),
                 ],
             ),
+            # dict(
+            #     type='Folder',
+            #     title=u'Eventos',
+            #     _addable_types=['Collection', 'Event', 'Folder'],
+            #     _children=[
+            #         dict(
+            #             type='Collection',
+            #             title=u'Eventos',
+            #             query=[
+            #                 dict(
+            #                     i='portal_type',
+            #                     o='plone.app.querystring.operation.selection.is',
+            #                     v='Event',
+            #                 ),
+            #                 dict(
+            #                     i='path',
+            #                     o='plone.app.querystring.operation.string.relativePath',
+            #                     v='../',
+            #                 ),
+            #             ],
+            #             sort_reversed=True,
+            #             sort_on=u'created',
+            #             limit=100,
+            #         ),
+            #         dict(
+            #             type='Event',
+            #             title=u'Lorem ipsum',
+            #             description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+            #             startDate=startDate,
+            #             endDate=endDate,
+            #             timezone=timezone,
+            #         ),
+            #         dict(
+            #             type='Event',
+            #             id='lorem-ipsum-1',
+            #             title=u'Lorem ipsum',
+            #             description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+            #             startDate=startDate,
+            #             endDate=endDate,
+            #             timezone=timezone,
+            #         ),
+            #         dict(
+            #             type='Event',
+            #             id='lorem-ipsum-2',
+            #             title=u'Lorem ipsum',
+            #             description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+            #             startDate=startDate,
+            #             endDate=endDate,
+            #             timezone=timezone,
+            #         ),
+            #         dict(
+            #             type='Event',
+            #             id='lorem-ipsum-3',
+            #             title=u'Lorem ipsum',
+            #             description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+            #             startDate=startDate,
+            #             endDate=endDate,
+            #             timezone=timezone,
+            #         ),
+            #     ],
+            # ),
         ],
     ),
     dict(
