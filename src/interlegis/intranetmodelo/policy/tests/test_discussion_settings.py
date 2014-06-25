@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from zope.component import getUtility
 from interlegis.intranetmodelo.policy.testing import INTEGRATION_TESTING
-from plone.registry.interfaces import IRegistry
 from plone.app.discussion.interfaces import IDiscussionSettings
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 
 import unittest
 
