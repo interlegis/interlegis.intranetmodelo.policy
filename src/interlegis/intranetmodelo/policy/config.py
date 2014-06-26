@@ -10,6 +10,9 @@ DEPENDENCIES = [
     'CMFPlacefulWorkflow',
 ]
 
+LOREM_TITLE = u'Lorem ipsum'
+LOREM_DESCRIPTION = u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+
 IMAGE = open(
     os.path.join(
         os.path.dirname(__file__), 'tests', 'bandeira-brasil.jpg')).read()
@@ -57,26 +60,26 @@ INTRANET_STRUCTURE = [
                     ),
                     dict(
                         type='News Item',
-                        title=u'Lorem ipsum',
-                        description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+                        title=LOREM_TITLE,
+                        description=LOREM_DESCRIPTION,
                     ),
                     dict(
                         type='News Item',
                         id='lorem-ipsum-1',
-                        title=u'Lorem ipsum',
-                        description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+                        title=LOREM_TITLE,
+                        description=LOREM_DESCRIPTION,
                     ),
                     dict(
                         type='News Item',
                         id='lorem-ipsum-2',
-                        title=u'Lorem ipsum',
-                        description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+                        title=LOREM_TITLE,
+                        description=LOREM_DESCRIPTION,
                     ),
                     dict(
                         type='News Item',
                         id='lorem-ipsum-3',
-                        title=u'Lorem ipsum',
-                        description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+                        title=LOREM_TITLE,
+                        description=LOREM_DESCRIPTION,
                     ),
                 ],
             ),
@@ -234,8 +237,8 @@ INTRANET_STRUCTURE = [
                     ),
                     dict(
                         type='News Item',
-                        title=u'Lorem ipsum',
-                        description=u'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+                        title=LOREM_TITLE,
+                        description=LOREM_DESCRIPTION,
                     ),
                 ],
             ),
