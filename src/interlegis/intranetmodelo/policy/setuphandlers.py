@@ -144,7 +144,7 @@ def import_registry_settings():
 
 
 def populate_intranet_cover(portal):
-    """Populate site front page. The layout is composed by 3 rows:
+    """Populate intranet front page. The layout is composed by 3 rows:
 
     1. 1 basic tile
     2. 2 collection tiles
@@ -152,37 +152,35 @@ def populate_intranet_cover(portal):
 
     Populate and configure those tiles.
     """
-    from cover import list_tiles
     from cover import set_tile_configuration
-    from cover import set_tile_data
 
     base_url = portal['intranet']['ponto-de-encontro'].absolute_url()
     cover = portal['intranet']['pagina-inicial-da-intranet']
     # second row
-    tiles = list_tiles(cover, 'collective.cover.collection')
+    tiles = cover.list_tiles('collective.cover.collection')
     obj = portal['intranet']['institucional']['comunicados']['comunicados']
     assert obj.portal_type == 'Collection'
     uuid = IUUID(obj)
     data = dict(header=u'Comunicados', footer=u'Mais…', uuid=uuid)
-    set_tile_data(cover, tiles[0], **data)
+    cover.set_tile_data(tiles[0], **data)
     set_tile_configuration(cover, tiles[1], image={'scale': 'icon'})
     obj = portal['intranet']['ponto-de-encontro']['mural']['mural']
     assert obj.portal_type == 'Collection'
     uuid = IUUID(obj)
     data = dict(header=u'Mural', footer=u'Mais…', uuid=uuid)
-    set_tile_data(cover, tiles[1], **data)
+    cover.set_tile_data(tiles[1], **data)
     set_tile_configuration(cover, tiles[1], image={'scale': 'preview'})
     # third row
-    tiles = list_tiles(cover, 'collective.cover.banner')
+    tiles = cover.list_tiles('collective.cover.banner')
     remote_url = base_url + '/classificados'
     data = dict(title=u'Classificados', remote_url=remote_url)
-    set_tile_data(cover, tiles[0], **data)
+    cover.set_tile_data(tiles[0], **data)
     remote_url = base_url + '/galeria-de-fotos'
     data = dict(title=u'Galeria de fotos', remote_url=remote_url)
-    set_tile_data(cover, tiles[1], **data)
+    cover.set_tile_data(tiles[1], **data)
     remote_url = base_url + '/mural'
     data = dict(title=u'Mural', remote_url=remote_url)
-    set_tile_data(cover, tiles[2], **data)
+    cover.set_tile_data(tiles[2], **data)
 
 
 def set_intranet_default_page(portal):

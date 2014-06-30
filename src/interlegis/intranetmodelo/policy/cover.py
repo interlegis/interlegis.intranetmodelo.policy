@@ -3,77 +3,7 @@
 from collective.cover.tiles.configuration import ANNOTATIONS_KEY_PREFIX
 from persistent.dict import PersistentDict
 from plone.app.imaging.utils import getAllowedSizes
-from plone.tiles.interfaces import ITileDataManager
 from zope.annotation.interfaces import IAnnotations
-
-import json
-
-
-def get_tiles(cover, types=None, layout=None):
-    """Traverse the layout tree and return a list of tiles on it.
-
-    :param types: tile types to be filtered; if none, return all tiles
-    :type types: str or list
-    :param layout: a JSON object describing sub-layout (internal use)
-    :type layout: list
-    :returns: a list of tiles; each tile is described as {id, type}
-    """
-    filter = types is not None
-    if filter and isinstance(types, str):
-        types = [types]
-
-    if layout is None:
-        # normal processing, we use the object's layout
-        try:
-            layout = json.loads(cover.cover_layout)
-        except TypeError:
-            layout = []
-    else:
-        # we are recursively processing the layout
-        assert isinstance(layout, list)
-
-    tiles = []
-    for e in layout:
-        if e['type'] == 'tile':
-            if filter and e['tile-type'] not in types:
-                continue
-            tiles.append(dict(id=e['id'], type=e['tile-type']))
-        if 'children' in e:
-            tiles.extend(get_tiles(cover, types, e['children']))
-    return tiles
-
-
-def list_tiles(cover, types=None):
-    """Return a list of tile id the layout.
-
-    :param types: tile types to be filtered; if none, return all tiles
-    :type types: str or list
-    :returns: a list of tile ids
-    """
-    return [t['id'] for t in get_tiles(cover, types)]
-
-
-def get_tile_type(cover, tile):
-    """Get tile type."""
-    tile = [t for t in get_tiles(cover) if t['id'] == tile]
-    assert len(tile) in (0, 1)
-    if len(tile) == 0:
-        raise ValueError
-    return tile[0]['type']
-
-
-def get_tile(cover, tile):
-    """Get tile type."""
-    type = str(get_tile_type(cover, tile))
-    tile = str(tile)
-    return cover.restrictedTraverse('{0}/{1}'.format(type, tile))
-
-
-def set_tile_data(cover, tile, **data):
-    """Set tile attributes."""
-    tile = get_tile(cover, tile)
-    data_mgr = ITileDataManager(tile)
-    data_mgr.set(data)
 
 
 def get_tile_configuration(cover, id, _raw=False):
@@ -83,7 +13,7 @@ def get_tile_configuration(cover, id, _raw=False):
     configuration = annotations.get(key, False)
     if not configuration:
         # FIXME: tiles don't have configuration first time we instantiate them
-        tile = get_tile(cover, id)
+        tile = cover.get_tile(id)
         configuration = tile.get_tile_configuration()  # return defaults
         annotations[key] = PersistentDict(configuration)
 
@@ -92,7 +22,7 @@ def get_tile_configuration(cover, id, _raw=False):
 
 def set_tile_configuration(cover, id, **configuration):
     """Set tile configuration."""
-    assert id in list_tiles(cover)
+    assert id in cover.list_tiles()
     annotations = IAnnotations(cover)
     key = '{0}.{1}'.format(ANNOTATIONS_KEY_PREFIX, id)
     # FIXME: tiles don't have configuration first time we instantiate them
