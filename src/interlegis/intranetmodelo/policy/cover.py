@@ -29,8 +29,13 @@ def set_tile_configuration(cover, id, **configuration):
     current = annotations.get(key, get_tile_configuration(cover, id, True))
 
     configuration = unprettify(configuration)
-    for key, value in configuration.iteritems():
-        current[key] = value
+    for field, settings in configuration.iteritems():
+        # update only keys present on the configuration parameter
+        if 'order' in settings:
+            # we have to reorder subsequent fields also
+            index = int(settings['order'])
+            _reorder(current, field, index)
+        current[field].update(settings)
 
     annotations[key] = PersistentDict(current)
 
@@ -77,3 +82,22 @@ def unprettify(configuration):
                 del value['visible']
         configuration[key] = value
     return configuration
+
+
+def _get_fields_in_order(configuration):
+    fields = [(configuration[k]['order'], k)
+              for k, v in configuration.iteritems() if k != 'css_class']
+    fields.sort(key=lambda f: f[0])
+    return [f[1] for f in fields]
+
+
+def _set_fields_in_order(configuration, order):
+    for i, field in enumerate(order):
+        configuration[field]['order'] = unicode(i)
+
+
+def _reorder(configuration, field, new_index):
+    order = _get_fields_in_order(configuration)
+    old_index = order.index(field)
+    order.insert(new_index, order.pop(old_index))
+    _set_fields_in_order(configuration, order)
