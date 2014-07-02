@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b2 (unreleased)
+1.0b2 (2014-07-02)
 ------------------
 
 - Habilita servidor XMPP padrão (https://colab.interlegis.leg.br/ticket/2944).
