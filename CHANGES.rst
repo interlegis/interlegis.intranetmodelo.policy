@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b3 (unreleased)
+1.0b3 (2014-08-25)
 ------------------
 
 - Correções nos metadados do pacote
