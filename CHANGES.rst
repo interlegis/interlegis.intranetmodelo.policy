@@ -4,7 +4,8 @@ Changelog
 1.0b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Correções nos metadados do pacote
+  [ericof]
 
 
 1.0b2 (2014-07-02)
