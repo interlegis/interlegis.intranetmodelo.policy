@@ -16,6 +16,7 @@ AVAILABLE = [
     'plone.app.ldap',
     'plone.app.openid',
     's17.taskmanager',
+    'webcouturier.dropdownmenu',
 ]
 
 DEPENDENCIES = [
@@ -32,7 +33,6 @@ DEPENDENCIES = [
     'plonesocial.network',
     's17.portlets',
     'Solgema.fullcalendar',
-    'webcouturier.dropdownmenu',
 ] + ZOPE2_STYLE_PRODUCTS
 
 
