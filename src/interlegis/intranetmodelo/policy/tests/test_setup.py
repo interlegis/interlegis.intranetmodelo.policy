@@ -32,7 +32,7 @@ DEPENDENCIES = [
     'plonesocial.network',
     's17.portlets',
     'Solgema.fullcalendar',
-    'webcouturier.dropdownmenu',
+    # 'webcouturier.dropdownmenu',
 ] + ZOPE2_STYLE_PRODUCTS
 
 
