@@ -4,7 +4,8 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Install s17.taskmanager by default.
+  [hvelarde]
 
 
 1.0b3 (2014-08-25)
