@@ -192,7 +192,9 @@ def set_intranet_default_page(portal):
 def open_feedback_poll(portal):
     intranet = portal['intranet']
     poll = intranet['institucional']['enquetes']['gostou-da-nova-intranet']
-    api.content.transition(poll, 'open')
+    # XXX: we're passing twice here; why?
+    if api.content.get_state(poll) == 'private':
+        api.content.transition(poll, 'open')
 
 
 def setup_various(context):
@@ -208,7 +210,7 @@ def setup_various(context):
     setup_department_permissions(intranet)
     populate_intranet_cover(portal)
     set_intranet_default_page(portal)
-    # open_feedback_poll(portal)
+    open_feedback_poll(portal)
 
 
 def fix_links_in_static_portlet(context):

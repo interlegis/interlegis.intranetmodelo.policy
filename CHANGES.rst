@@ -4,6 +4,9 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Feedback poll is now open by default.
+  [hvelarde]
+
 - Install s17.taskmanager by default.
   [hvelarde]
 
