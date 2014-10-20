@@ -15,6 +15,11 @@ class Fixture(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         import interlegis.intranetmodelo.policy
         self.loadZCML(package=interlegis.intranetmodelo.policy)
+        import interlegis.intranetmodelo.departments
+        self.loadZCML(
+            package=interlegis.intranetmodelo.departments,
+            name='dependencies.zcml'
+        )
 
         z2.installProduct(app, 'collective.classifieds')
         z2.installProduct(app, 'Products.CMFPlacefulWorkflow')
