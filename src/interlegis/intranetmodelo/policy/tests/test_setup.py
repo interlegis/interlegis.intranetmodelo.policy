@@ -15,7 +15,6 @@ AVAILABLE = [
     'collective.xmpp.core',
     'plone.app.ldap',
     'plone.app.openid',
-    's17.taskmanager',
     'webcouturier.dropdownmenu',
 ]
 
@@ -32,6 +31,7 @@ DEPENDENCIES = [
     'plonesocial.microblog',
     'plonesocial.network',
     's17.portlets',
+    's17.taskmanager',
     'Solgema.fullcalendar',
 ] + ZOPE2_STYLE_PRODUCTS
 
