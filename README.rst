@@ -44,13 +44,21 @@ Dependências
 
 Este pacote instala as seguintes dependências:
 
+* `collective.weather`_
+* `collective.xmpp.chat`_
+* `interlegis.intranetmodelo.departments`_
 * `Products.CMFPlacefulWorkflow`_
 * `plonesocial.activitystream`_
 * `plonesocial.microblog`_
 * `plonesocial.network`_
+* `s17.taskmanager`_
 
+.. _`collective.weather`: https://pypi.python.org/pypi/collective.weather
+.. _`collective.xmpp.chat`: https://pypi.python.org/pypi/collective.xmpp.chat
+.. _`interlegis.intranetmodelo.departments`: https://pypi.python.org/pypi/interlegis.intranetmodelo.departments
 .. _`Plone Social Suite`: https://pypi.python.org/pypi/plonesocial.suite
 .. _`plonesocial.activitystream`: https://pypi.python.org/pypi/plonesocial.activitystream
 .. _`plonesocial.microblog`: https://pypi.python.org/pypi/plonesocial.microblog
 .. _`plonesocial.network`: https://pypi.python.org/pypi/plonesocial.network
 .. _`Products.CMFPlacefulWorkflow`: https://pypi.python.org/pypi/Products.CMFPlacefulWorkflow
+.. _`17.taskmanager: https://pypi.python.org/pypi/s17.taskmanager

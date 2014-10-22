@@ -23,7 +23,8 @@ class DiscussionTestCase(unittest.TestCase):
         self.assertTrue(settings.globally_enabled)
         self.assertFalse(settings.moderation_enabled)
         self.assertTrue(settings.show_commenter_image)
-        self.assertEqual(settings.text_transform, u'text/plain')
+        self.assertTrue(settings.user_notification_enabled)
+        self.assertEqual(settings.text_transform, u'text/x-web-intelligent')
 
     def test_workflow(self):
         self.assertIn('comment_review_workflow', self.portal.portal_workflow)

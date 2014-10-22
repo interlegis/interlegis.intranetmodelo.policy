@@ -93,6 +93,12 @@ class DependenciesSettingsTestCase(unittest.TestCase):
         self.portal = self.layer['portal']
         self.registry = getUtility(IRegistry)
 
+    def test_collective_cover_settings(self):
+        from collective.cover.controlpanel import ICoverSettings
+        settings = self.registry.forInterface(ICoverSettings)
+        self.assertEqual(len(settings.layouts), 1)
+        self.assertIn(u'Intranet Modelo', settings.layouts)
+
     def test_plone_app_event_settings(self):
         self.assertEqual(
             self.registry['plone.app.event.portal_timezone'], u'Brazil/East')
@@ -101,3 +107,10 @@ class DependenciesSettingsTestCase(unittest.TestCase):
             [u'Brazil/Acre', u'Brazil/DeNoronha', u'Brazil/East', u'Brazil/West']
         )
         self.assertEqual(self.registry['plone.app.event.first_weekday'], u'6')
+
+    def test_collective_weather_settings(self):
+        from collective.weather.interfaces import IWeatherSettings
+        settings = self.registry.forInterface(IWeatherSettings)
+        expected = [u'455819|Brasília, DF']
+        self.assertEqual(settings.location_ids, expected)
+

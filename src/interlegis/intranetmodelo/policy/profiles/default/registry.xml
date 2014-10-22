@@ -75,8 +75,11 @@
   <record name="plone.app.discussion.interfaces.IDiscussionSettings.show_commenter_image" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="show_commenter_image">
     <value>True</value>
   </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.user_notification_enabled" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="user_notification_enabled">
+    <value>True</value>
+  </record>
   <record name="plone.app.discussion.interfaces.IDiscussionSettings.text_transform" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="text_transform">
-    <value>text/plain</value>
+    <value>text/x-web-intelligent</value>
   </record>
 
 </registry>

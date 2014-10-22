@@ -41,6 +41,7 @@ setup(
         'cioppino.twothumbs',
         'collective.classifieds',
         'collective.cover',
+        'collective.flowplayer',
         'collective.polls',
         'collective.weather',
         'collective.xmpp.chat',
