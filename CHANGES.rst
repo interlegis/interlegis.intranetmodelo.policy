@@ -4,6 +4,12 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Fix test for collective.cover layouts
+  [jeanferri]
+
+- Change discussion default settings
+  [jeanferri]
+
 - Remove institucional folder from intranet because it already exists in portal
   [jeanferri]
 

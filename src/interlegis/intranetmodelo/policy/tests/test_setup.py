@@ -23,6 +23,8 @@ DEPENDENCIES = [
     'collective.classifieds',
     'collective.cover',
     'collective.polls',
+    #'collective.xmpp.chat',
+    #'collective.xmpp.core',
     'collective.weather',
     'ftw.globalstatusmessage',
     'interlegis.intranetmodelo.departments',
@@ -96,7 +98,7 @@ class DependenciesSettingsTestCase(unittest.TestCase):
     def test_collective_cover_settings(self):
         from collective.cover.controlpanel import ICoverSettings
         settings = self.registry.forInterface(ICoverSettings)
-        self.assertEqual(len(settings.layouts), 1)
+        self.assertEqual(len(settings.layouts), 5)
         self.assertIn(u'Intranet Modelo', settings.layouts)
 
     def test_plone_app_event_settings(self):
