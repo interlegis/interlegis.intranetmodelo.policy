@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from interlegis.intranetmodelo.policy.config import CREATORS
 from interlegis.intranetmodelo.policy.config import DEPENDENCIES
 from interlegis.intranetmodelo.policy.config import IMAGE
 from interlegis.intranetmodelo.policy.config import INTRANET_STRUCTURE
@@ -158,7 +159,7 @@ def populate_intranet_cover(portal):
     cover = portal['intranet']['pagina-inicial-da-intranet']
     # second row
     tiles = cover.list_tiles('collective.cover.collection')
-    obj = portal['intranet']['institucional']['comunicados']['comunicados']
+    obj = portal['intranet']['ponto-de-encontro']['comunicados']['comunicados']
     assert obj.portal_type == 'Collection'
     uuid = IUUID(obj)
     data = dict(header=u'Comunicados', footer=u'Mais…', uuid=uuid)
@@ -191,8 +192,10 @@ def set_intranet_default_page(portal):
 
 def open_feedback_poll(portal):
     intranet = portal['intranet']
-    poll = intranet['institucional']['enquetes']['gostou-da-nova-intranet']
+    poll = intranet['ponto-de-encontro']['enquete']['gostou-da-nova-intranet']
     api.content.transition(poll, 'open')
+    poll.reindexObject()
+    logger.debug(u'Enquete inicial da intranet publicada')
 
 
 def setup_various(context):
@@ -243,6 +246,7 @@ def fix_links_in_static_portlet(context):
 
     portlet = mapping['voting-portlet']
     intranet = portal['intranet']
-    poll = intranet['institucional']['enquetes']['gostou-da-nova-intranet']
+    poll = intranet['ponto-de-encontro']['enquete']['gostou-da-nova-intranet']
     portlet.poll = IUUID(poll)
-    logger.debug(u'Portlet de enquetes atualizado')
+    logger.debug(u'Portlet de enquete atualizado')
+

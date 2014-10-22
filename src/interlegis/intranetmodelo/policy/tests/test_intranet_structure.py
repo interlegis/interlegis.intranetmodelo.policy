@@ -77,5 +77,6 @@ class IntranetStructureTestCase(unittest.TestCase):
 
     def test_feedback_poll_is_open(self):
         intranet = self.portal['intranet']
-        poll = intranet['institucional']['enquetes']['gostou-da-nova-intranet']
+        poll = intranet['ponto-de-encontro']['enquete']['gostou-da-nova-intranet']
         self.assertEqual(api.content.get_state(poll), 'open')
+

@@ -4,7 +4,8 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove institucional folder from intranet because it already exists in portal
+  [jeanferri]
 
 
 1.0b3 (2014-08-25)
