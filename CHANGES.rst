@@ -4,7 +4,14 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove institucional folder from intranet because it already exists in portal
+  [jeanferri]
+
+- Feedback poll is now open by default.
+  [hvelarde]
+
+- Install s17.taskmanager by default.
+  [hvelarde]
 
 
 1.0b3 (2014-08-25)
