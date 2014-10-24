@@ -24,18 +24,10 @@
       />
 
   <genericsetup:importStep
-      name="interlegis.intranetmodelo.policy:setup_various"
-      title="Intranet Modelo (configuration)"
-      description="Handlers especiais de instalação da Intranet Modelo."
-      handler=".setuphandlers.setup_various">
-  </genericsetup:importStep>
-
-  <genericsetup:importStep
       name="interlegis.intranetmodelo.policy:portlets_post_configuration"
       title="Intranet Modelo (portlets post configuration)"
       description="Settings to be fixed after portlet assignments."
       handler=".setuphandlers.fix_links_in_static_portlet">
-    <depends name="interlegis.intranetmodelo.policy:setup_various" />
     <depends name="portlets" />
   </genericsetup:importStep>
 

@@ -13,7 +13,8 @@ Changelog
 - Remove institucional folder from intranet because it already exists in portal
   [jeanferri]
 
-- Feedback poll is now open by default.
+- Fix import step registration to avoid running it twice.
+  Feedback poll is now open by default.
   [hvelarde]
 
 - Install s17.taskmanager by default.

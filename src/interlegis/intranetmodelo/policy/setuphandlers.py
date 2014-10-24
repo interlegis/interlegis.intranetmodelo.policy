@@ -193,9 +193,7 @@ def set_intranet_default_page(portal):
 def open_feedback_poll(portal):
     intranet = portal['intranet']
     poll = intranet['ponto-de-encontro']['enquete']['gostou-da-nova-intranet']
-    # XXX: we're passing twice here; why?
-    if api.content.get_state(poll) == 'private':
-        api.content.transition(poll, 'open')
+    api.content.transition(poll, 'open')
     poll.reindexObject()
     logger.debug(u'Enquete inicial da intranet publicada')
 
