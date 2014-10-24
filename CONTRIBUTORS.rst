@@ -2,6 +2,7 @@ Contributors
 ============
 
 * `Diogo Garcia`_ (foto da bandeira do Brasil, baixo a licencia `CC BY-NC 3.0`_)
+* Érico Andrei
 * Héctor Velarde
 * Jean Ferri
 * Karyn Nassif
