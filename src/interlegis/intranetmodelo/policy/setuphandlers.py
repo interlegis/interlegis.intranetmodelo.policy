@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from interlegis.intranetmodelo.policy.config import CREATORS
 from interlegis.intranetmodelo.policy.config import DEPENDENCIES
 from interlegis.intranetmodelo.policy.config import IMAGE
 from interlegis.intranetmodelo.policy.config import INTRANET_STRUCTURE
@@ -249,4 +248,3 @@ def fix_links_in_static_portlet(context):
     poll = intranet['ponto-de-encontro']['enquete']['gostou-da-nova-intranet']
     portlet.poll = IUUID(poll)
     logger.debug(u'Portlet de enquete atualizado')
-

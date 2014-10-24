@@ -23,8 +23,8 @@ DEPENDENCIES = [
     'collective.classifieds',
     'collective.cover',
     'collective.polls',
-    #'collective.xmpp.chat',
-    #'collective.xmpp.core',
+    # 'collective.xmpp.chat',
+    # 'collective.xmpp.core',
     'collective.weather',
     'ftw.globalstatusmessage',
     'interlegis.intranetmodelo.departments',
@@ -115,4 +115,3 @@ class DependenciesSettingsTestCase(unittest.TestCase):
         settings = self.registry.forInterface(IWeatherSettings)
         expected = [u'455819|Brasília, DF']
         self.assertEqual(settings.location_ids, expected)
-
