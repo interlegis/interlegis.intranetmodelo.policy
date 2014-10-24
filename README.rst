@@ -61,4 +61,4 @@ Este pacote instala as seguintes dependências:
 .. _`plonesocial.microblog`: https://pypi.python.org/pypi/plonesocial.microblog
 .. _`plonesocial.network`: https://pypi.python.org/pypi/plonesocial.network
 .. _`Products.CMFPlacefulWorkflow`: https://pypi.python.org/pypi/Products.CMFPlacefulWorkflow
-.. _`17.taskmanager`: https://pypi.python.org/pypi/s17.taskmanager
+.. _`s17.taskmanager`: https://pypi.python.org/pypi/s17.taskmanager
