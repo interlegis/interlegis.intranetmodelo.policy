@@ -4,6 +4,9 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Fix import step registration to avoid running it twice
+  [hvelarde]
+
 - Fix test for collective.cover layouts
   [jeanferri]
 
