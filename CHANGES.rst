@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b4 (unreleased)
+1.0b4 (2014-10-24)
 ------------------
 
 - Fix import step registration to avoid running it twice

@@ -3,7 +3,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '1.0b4.dev0'
+version = '1.0b4'
 description = 'Intranet Modelo do Programa Interlegis.'
 long_description = (
     open('README.rst').read() + '\n' +
