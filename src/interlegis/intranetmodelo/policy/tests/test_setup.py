@@ -74,11 +74,8 @@ class InstallTestCase(BaseTestCase):
 class UninstallTestCase(BaseTestCase):
     """Ensure product is properly uninstalled."""
 
-    def setUp(self):
-        BaseTestCase.setUp(self)
-        self.qi.uninstallProducts(products=[PROJECTNAME])
-
     def test_uninstalled(self):
+        self.qi.uninstallProducts(products=[PROJECTNAME])
         self.assertFalse(self.qi.isProductInstalled(PROJECTNAME))
 
     def test_browser_layer_removed(self):
