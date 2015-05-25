@@ -4,7 +4,8 @@ Changelog
 1.0b5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix test test_setup.py
+  [marciomazza]
 
 
 1.0b4 (2014-10-24)
