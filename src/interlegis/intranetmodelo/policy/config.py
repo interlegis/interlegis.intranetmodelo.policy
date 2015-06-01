@@ -24,7 +24,7 @@ timezone = 'Brazil/East',
 
 # new intranet structure; this dictionary defines the objects that are going
 # to be created on the root of the intranet; it also includes information
-# about folder constrains and objects to be created inside them
+# about folder constraints and objects to be created inside them
 INTRANET_STRUCTURE = [
     dict(
         type='collective.cover.content',
