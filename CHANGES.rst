@@ -4,7 +4,8 @@ Changelog
 1.0b6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix test uninstall
+  [jeanferri]
 
 
 1.0b5 (2015-06-17)
