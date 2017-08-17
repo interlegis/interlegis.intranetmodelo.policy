@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="portal_memberdata" meta_type="Plone Memberdata Tool" purge="False">
+  <property name="birthday" type="string" remove="true"></property>
+  <property name="extension" type="string" remove="true"></property>
+  <property name="mobile" type="string" remove="true"></property>
+</object>
