@@ -2,6 +2,8 @@
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from plonesocial.microblog.interfaces import IMicroblogContext
 from zope.interface import noLongerProvides
+from interlegis.intranetmodelo.policy.config import PROJECTNAME
+from plone import api
 
 
 def uninstall(portal, reinstall=False):
@@ -13,4 +15,9 @@ def uninstall(portal, reinstall=False):
                 noLongerProvides(intranet, INavigationRoot)
             if IMicroblogContext.providedBy(intranet):
                 noLongerProvides(intranet, IMicroblogContext)
+
+        profile = 'profile-%s:uninstall' % PROJECTNAME
+        setup_tool = api.portal.get_tool(name='portal_setup')
+        setup_tool.runAllImportStepsFromProfile(profile)
         return 'Ran all uninstall steps.'
+
