@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b7 (unreleased)
+1.0b7 (2017-08-25)
 ------------------
 
 - Fix uninstall
