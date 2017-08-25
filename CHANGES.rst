@@ -10,6 +10,9 @@ Changelog
 1.0b6 (2015-08-26)
 ------------------
 
+- Fix uninstall
+  [rafahela]
+
 - Fix test uninstall
   [jeanferri]
 
